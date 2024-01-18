@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Configuration</title>
+</head>
+<body>
+
+<h1>Printer Configuration</h1>
+
+<form action="/saveConfig" method="post">
+    <label for="serialPortName">Serial Port:</label>
+    <input type="text" id="serialPortName" name="serialPortName" th:value="${serialPortName}" required>
+    <br>
+    <label for="printerName">Printer:</label>
+    <input type="text" id="printerName" name="printerName" th:value="${printerName}" required>
+    <br>
+    <button type="submit">Save Configuration</button>
+</form>
+
+</body>
+</html>
